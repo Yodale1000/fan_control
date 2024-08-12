@@ -1,0 +1,11 @@
+[Unit]
+Description=Raspberry Pi Fan Control Service
+After=multi-user.target
+
+[Service]
+ExecStart=/home/pi/fan_control/fan_control --temp-on 45 --temp-off 40 --full-speed 75 --interval 15
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
